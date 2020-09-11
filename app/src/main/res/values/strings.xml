@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GADS</string>
+    <string name="title_activity_leaderboard">LeaderboardActivity</string>
+    <string name="tab_learning_leaders">Learning Leaders</string>
+    <string name="tab_skill_iq">Skill IQ Leaders</string>
+    <string name="no_results">No Internet, check Connection!!! 😓</string>
+</resources>

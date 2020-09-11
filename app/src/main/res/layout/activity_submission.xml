@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <RelativeLayout
+       android:id="@+id/title_layout"
+       android:layout_width="wrap_content"
+       android:padding="5dp"
+       android:layout_height="?actionBarSize">
+       <ImageButton
+           android:id="@+id/back_arrow"
+           android:layout_width="32dp"
+           android:padding="8dp"
+           android:layout_centerVertical="true"
+           android:background="@drawable/ic_baseline_arrow_back_24"
+           android:layout_height="32dp"
+           />
+       <ImageView
+           android:id="@+id/title"
+           android:layout_width="match_parent"
+           android:layout_height="?actionBarSize"
+           android:layout_toRightOf="@id/back_arrow"
+           android:background="@drawable/title"/>
+   </RelativeLayout>
+    <ImageView
+        android:id="@+id/sub_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_layout"
+        android:background="@drawable/sub"/>
+
+
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@id/sub_"
+        android:padding="8dp"
+        android:layout_marginTop="64dp">
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:padding="16dp"
+            android:background="@drawable/round_background_child"
+            android:textColor="@android:color/black"
+            android:inputType="textPersonName"
+            android:text="First Name" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:padding="16dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/round_background_child"
+            android:textColor="@android:color/black"
+            android:inputType="textPersonName"
+            android:text="Last Name" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/email_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_layout"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="104dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/round_background_child"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:text="Email Address" />
+
+    <EditText
+
+        android:id="@+id/github_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:ems="10"
+        android:background="@drawable/round_background_child"
+      android:layout_below="@id/email_address"
+        android:layout_marginTop="64dp"
+        android:inputType="textPersonName"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Project on GITHUB(link)" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:padding="16dp"
+        android:layout_below="@id/github_link"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:background="@drawable/round_background_button"
+        android:text="Submit" />
+</RelativeLayout>

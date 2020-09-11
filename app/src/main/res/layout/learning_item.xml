@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/round_background"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+
+    >
+
+    <ImageView
+        android:id="@+id/top_learner_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/top_learner" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="7dp"
+android:background="@drawable/round_background_child"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+android:textColor="@android:color/black"
+        android:padding="8dp"
+        android:layout_toRightOf="@id/top_learner_image"
+        android:text="name"
+        />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="13dp"
+        android:layout_toRightOf="@id/top_learner_image"
+        android:background="@drawable/round_background_child"
+        android:fontFamily="@font/roboto_thin"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:text="details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_learner_image"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+</RelativeLayout>
