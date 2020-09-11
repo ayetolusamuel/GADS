@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/custom_toast_container">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:background="@drawable/round_background_child"
+    android:layout_margin="8dp"
+       android:layout_height="wrap_content">
+
+       <ImageButton
+           android:id="@+id/submission_icon"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="94dp"
+           android:fontFamily="@font/roboto_thin"
+           />
+
+       <TextView
+           android:id="@+id/submission"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/submission_icon"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="34dp"
+           android:layout_marginBottom="34dp"
+           android:background="@drawable/orange_white_border_background"
+           android:paddingLeft="46dp"
+           android:paddingTop="16dp"
+           android:paddingRight="46dp"
+           android:paddingBottom="16dp"
+           android:text=""
+           android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+   </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/custom_toast_container"
+    android:background="@drawable/round_background_child">
+
+
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/round_background_child"
+       >
+       <ImageButton
+           android:id="@+id/no"
+           android:layout_width="32dp"
+           android:layout_height="32dp"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="30dp"
+           android:layout_marginRight="23dp"
+           android:background="@drawable/circle_shape"
+           android:padding="16dp"
+           android:src="@drawable/ic_baseline_close_24" />
+
+       <TextView
+           android:id="@+id/are_you_sure"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="94dp"
+           android:fontFamily="@font/roboto_thin"
+           android:padding="16dp"
+           android:text="Are you sure?"
+           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+           android:textColor="@android:color/black" />
+
+       <TextView
+           android:id="@+id/yes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/are_you_sure"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="34dp"
+           android:layout_marginBottom="34dp"
+           android:background="@drawable/orange_white_border_background"
+           android:paddingLeft="46dp"
+           android:paddingTop="16dp"
+           android:paddingRight="46dp"
+           android:paddingBottom="16dp"
+           android:text="Yes"
+           android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+   </RelativeLayout>
+
+</RelativeLayout>

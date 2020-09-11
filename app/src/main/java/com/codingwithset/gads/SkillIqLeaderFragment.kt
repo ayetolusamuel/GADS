@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codingwithset.gads.livadata.SkillIqLeaderViewModel
 import com.codingwithset.gads.utils.checkInternetAccess
+import com.github.ybq.android.spinkit.SpinKitView
 import kotlinx.android.synthetic.main.fragment_skill_leaders.*
 
 /**
@@ -27,8 +29,10 @@ class SkillIqLeaderFragment : Fragment() {
 
         val isFlag = requireActivity(). checkInternetAccess()
         if (!isFlag!!){
-            progress_bar.visibility = View.GONE
-            internet_error.visibility = View.VISIBLE
+            val progressBar = root.findViewById<SpinKitView>(R.id.progress_bar)
+            progressBar.visibility = View.GONE
+            val internetError = root.findViewById<TextView>(R.id.internet_error)
+            internetError.visibility = View.VISIBLE
         }
 
         skillIqLeaderViewModel =
@@ -39,13 +43,13 @@ class SkillIqLeaderFragment : Fragment() {
         skillIqLeaderViewModel.getSkillIqLeaderList().data.observe(requireActivity(), {
             if (it.isEmpty())
                 showError()
-
-            println("tit $it")
-            progress_bar.visibility = View.GONE
-            recyclerView.apply {
-                layoutManager = LinearLayoutManager(requireActivity())
-                adapter = SkillAdapter(it)
-            }
+           requireActivity().runOnUiThread {
+               progress_bar.visibility = View.GONE
+               recyclerView.apply {
+                   layoutManager = LinearLayoutManager(requireActivity())
+                   adapter = SkillAdapter(it)
+               }
+           }
         })
 
         skillIqLeaderViewModel.getSkillIqLeaderList().networkErrors.observe(requireActivity(), {
@@ -59,7 +63,10 @@ class SkillIqLeaderFragment : Fragment() {
     }
 
     private fun showError() {
-        progress_bar.visibility = View.GONE
+        requireActivity().runOnUiThread {
+            progress_bar.visibility = View.GONE
+        }
+
     }
 
     companion object {

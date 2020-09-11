@@ -50,7 +50,7 @@
             android:background="@drawable/round_background_child"
             android:textColor="@android:color/black"
             android:inputType="textPersonName"
-            android:text="First Name" />
+            android:hint="First Name" />
 
         <EditText
             android:id="@+id/last_name"
@@ -63,7 +63,7 @@
             android:background="@drawable/round_background_child"
             android:textColor="@android:color/black"
             android:inputType="textPersonName"
-            android:text="Last Name" />
+            android:hint="Last Name" />
 
 
     </LinearLayout>
@@ -84,7 +84,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="16dp"
-        android:text="Email Address" />
+        android:hint="Email Address" />
 
     <EditText
 
@@ -100,7 +100,7 @@
         android:inputType="textPersonName"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Project on GITHUB(link)" />
+        android:hint="Project on GITHUB(link)" />
 
     <Button
         android:id="@+id/submit"

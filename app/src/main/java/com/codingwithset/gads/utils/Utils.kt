@@ -1,9 +1,17 @@
 package com.codingwithset.gads.utils
 
+import android.app.Activity
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.view.Gravity
+import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
+import com.codingwithset.gads.ExitApp
+import com.codingwithset.gads.R
+import kotlinx.android.synthetic.main.dialog_layout.*
 
 
 fun Context.checkInternetAccess(): Boolean? {
@@ -70,4 +78,23 @@ fun Context.checkInternetAccess(): Boolean? {
 //    }
 //
 //
+//}
+
+//
+//
+//fun Activity.customToast() {
+//    val inflater = layoutInflater
+//    val layout = inflater.inflate(R.layout.dialog_layout, custom_toast_container) as ViewGroup
+//    val displayMessage = layout.findViewById<TextView>(R.id.yes)
+//
+//    val dialog = ExitApp()
+//  dialog.show(supportFragmentManager, "dialog_exit_app")
+//
+////    val toast = Toast(applicationContext)
+////
+////   // displayMessage.text = message
+////    toast.setGravity(Gravity.BOTTOM, 0, 64)
+////    toast.duration = Toast.LENGTH_SHORT
+////    toast.view = layout
+////    toast.show()
 //}
