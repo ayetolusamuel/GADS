@@ -1,4 +1,3 @@
-# GADS
 ## Google Africa Developer Scholarship project
 #Images
 
